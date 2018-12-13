@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block header %}
+        <header class="head">
+        <div class="logo">
+            <a href="/home"><img src="../static/images/logo3.png" style=""></a>
+        </div>
+            <nav>
+                <div>
+                <a href="/profilepage" class="loglog"><img class="profilelogo" src="../static/images/profile.png"></a>
+                <p class="loginame">{{ name }}</p>
+                </div>
+                <a href="/logout">Logout</a>
+            </nav>
+		</header>
+{% endblock %}
+
+{% block content %}
+    <!-- Here i will have the profile page -->
+    <h1>Welcome {{ name }}</h1>
+{% endblock %}

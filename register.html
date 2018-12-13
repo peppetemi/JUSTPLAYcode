@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% block header %}
+        <header class="head">
+        <div class="logo">
+            <a href="/home"><img src="../static/images/logo3.png" style=""></a>
+        </div>
+            <nav>
+                <a href="/profilepage" class="loglog"><img class="profilelogo" src="../static/images/profile.png"></a>
+            </nav>
+		</header>
+{% endblock %}
+
+{% block content %}
+<h1 class="reg">{{ title }}</h1>
+
+    <div class="content-section-register">
+        <form method="POST" action="">
+            {{  formpage.hidden_tag()}}
+
+            <fieldset class="form-fields">
+                <legend class="leg">Create a new account</legend>
+
+                <div class="form-group">
+                    {{ formpage.firstname.label(class="form-control-lable") }}
+                    {% if formpage.firstname.errors %}
+                        {{ formpage.firstname(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in form.firstname.errors %}
+                            <span>{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                     {{ formpage.firstname(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ formpage.lastname.label(class="form-control-lable") }}
+                    {% if formpage.lastname.errors %}
+                        {{ formpage.lastname(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in form.lastname.errors %}
+                            <span>{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                     {{ formpage.lastname(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ formpage.name.label(class="form-control-lable") }}
+                    {% if formpage.name.errors %}
+                        {{ formpage.name(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in formpage.name.errors %}
+                            <span>{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                     {{ formpage.name(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ formpage.email.label(class="form-control-lable") }}
+                    {% if formpage.email.errors %}
+                        {{ formpage.email(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in formpage.email.errors %}
+                            <span>{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                    {{ formpage.email(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ formpage.password.label(class="form-control-lable") }}
+                    {% if formpage.password.errors %}
+                        {{ formpage.password(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in formpage.password.errors %}
+                            <span>{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                    {{ formpage.password(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ formpage.password_con.label(class="form-control-lable") }}
+                    {% if formpage.password_con.errors %}
+                        {{ formpage.password_con(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in formpage.password_con.errors %}
+                            <span>{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                    {{ formpage.password_con(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                   <a href="/login" class="linktoreg">Have you already an account?</a>
+                </div>
+
+                <div class="form-group-bott">
+                    {{ formpage.submit(class="submit-botton") }}
+                </div>
+
+            </fieldset>
+
+        </form>
+    </div>
+
+{% endblock %}

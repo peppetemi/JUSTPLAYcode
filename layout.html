@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JUST PLAY</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+
+<div class="container">
+{% block header %}
+
+{% endblock %}
+</div>
+
+
+<div class="flaskblock">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<div class="main-footer">
+    <div class="container2">
+    <div class="upfooter">
+
+        <div class="column1">
+            <ul>
+                <li><a href="#" target="_blank" class="lifont">Privacy policy</a></li>
+                <li><a href="#" target="_blank" class="lifont">Terms of use</a></li>
+            </ul>
+        </div>
+
+        <div class="column2">
+            <ul>
+                <li><a href="#" target="_blank" class="lifont">Work with us</a></li>
+                <li><a href="#" target="_blank" class="lifont">Partners</a></li>
+            </ul>
+        </div>
+
+        <div class="downloadapp">
+            <a href='http://play.google.com/store/#?pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target="_blank" title="Download from Play Store"><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="auto" height="70"/></a>
+            <a href='https://itunes.apple.com/it/app/apple-store/id375380948?mt=8' target="_blank" title="Download from Apple Store"><img src="../static/images/appstoreicon.png" width="auto" height="50"/></a>
+        </div>
+
+        <div class="socialpages">
+            <ul>
+                <li class="socialpages_"><a href="#" target="_blank" title="Facebook"><img src="../static/images/fbicon.png" width="auto" height="50"/></a></li>
+                <li class="socialpages_"><a href="#" target="_blank" title="Instagram"><img src="../static/images/instaicon.png" width="auto" height="50"/></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="divider">
+    </div>
+
+    <div class="downfooter">
+        <div class="copyright">
+            <p>©2018 Polito Students - info@justplay.it</p>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+</footer>
+</body>
+</html>

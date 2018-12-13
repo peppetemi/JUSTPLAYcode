@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <header class="head">
+        <div class="logo">
+            <a href="/home"><img src="../static/images/logo3.png" style=""></a>
+        </div>
+            <nav>
+                <a href="/profilepage" class="loglog"><img class="profilelogo" src="../static/images/profile.png"></a>
+            </nav>
+		</header>
+{% endblock %}
+
+{% block content %}
+<div class="homecontainer">
+    <header class="home-wel-mess">
+        <h1>Welcome to JustPlay</h1>
+    </header>
+
+    <div class="flex">
+
+        <div class="left-bott">
+            <a href="/createamatch" class="button">CREATE A MATCH</a>
+        </div>
+
+        <div class="right-bott">
+            <a href="#" class="button">JOIN A MATCH</a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+

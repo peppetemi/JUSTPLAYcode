@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+            <header class="head">
+        <div class="logo">
+            <a href="/home"><img src="../static/images/logo3.png" style=""></a>
+        </div>
+            <nav>
+                <div>
+                <a href="/profilepage" class="loglog"><img class="profilelogo" src="../static/images/profile.png"></a>
+                <p class="loginame">{{ name }}</p>
+                </div>
+                <a href="/logout">Logout</a>
+            </nav>
+		</header>
+{% endblock %}
+
+{% block content %}
+<h1 class="log">{{ title }}</h1>
+    <div class="content-section-matchcreation">
+    <form method="post">
+        {{ formpage.hidden_tag() }}
+        <fieldset class="form-fields">
+            <legend class="leg"></legend>
+
+           <div class="form-group">
+               {{ formpage.private_match.label(class="yesnolabel") }}
+                   {% for subfield in formpage.private_match %}
+                   <tr class="radiobox">
+                       <td>{{ subfield(class='radiobox') }}
+                       <td>{{ subfield.label(class='radiotext') }}</td>
+                   </tr>
+                   {% endfor %}
+           </div>
+
+           <div class="form-group">
+               {{ formpage.date.label(class="form-control-lable") }}
+               {% if formpage.date.errors %}
+                   {{ formpage.date(class="wrongformbox") }}
+                   <div class="invalid-feedback">
+                       {% for eroor in formpage.date.errors %}
+                           <span class="errormessage">{{ eroor }}</span>
+                       {% endfor %}
+                   </div>
+               {% else %}
+                    {{ formpage.date(class="formbox") }}
+               {% endif %}
+           </div>
+
+            <div class="form-group-bott">
+                {{ formpage.submit(class="submit-botton") }}
+            </div>
+
+        </fieldset>
+    </form>
+    </div>
+{% endblock %}

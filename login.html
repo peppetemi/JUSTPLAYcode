@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block header %}
+        <header class="head">
+        <div class="logo">
+            <a href="/home"><img src="../static/images/logo3.png" style=""></a>
+        </div>
+            <nav>
+                <a href="/profilepage" class="loglog"><img class="profilelogo" src="../static/images/profile.png"></a>
+            </nav>
+		</header>
+{% endblock %}
+
+{% block content %}
+ <h1 class="log">{{ title }}</h1>
+
+ <div class="content-section-login">
+    <form method="POST">
+        {{ formpage.hidden_tag() }}
+    <fieldset class="form-fields">
+                <legend class="leg"></legend>
+
+                <div class="form-group">
+                     {{ formpage.email.label(class="form-control-lable") }}
+                     {% if formpage.email.errors %}
+                         {{ formpage.email(class="wrongformbox") }}
+                         <div class="invalid-feedback">
+                         {% for eroor in formpage.email.errors %}
+                            <span class="errormessage">{{ eroor }}</span>
+                         {% endfor %}
+                        </div>
+                    {% else %}
+                    {{ formpage.email(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ formpage.password.label(class="form-control-lable") }}
+                    {% if formpage.password.errors %}
+                        {{ formpage.password(class="wrongformbox") }}
+                        <div class="invalid-feedback">
+                        {% for eroor in formpage.password.errors %}
+                            <span class="errormessage">{{ eroor }}</span>
+                        {% endfor %}
+                        </div>
+                    {% else %}
+                    {{ formpage.password(class="formbox") }}
+                    {% endif %}
+                </div>
+
+                 <div class="form-group">
+                   <a href="/register" class="linktoreg">Don't have an account?</a>
+                </div>
+
+                <div class="form-group-bott">
+                    {{ formpage.submit(class="submit-botton") }}
+                </div>
+
+            </fieldset>
+
+    </form>
+</div>
+{% endblock %}
