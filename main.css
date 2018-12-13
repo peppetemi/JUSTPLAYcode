@@ -1,0 +1,329 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: Candara;
+}
+
+body {
+	background:#e9e9e9;
+}
+
+/* HEADER */
+
+header{
+	width:100%;
+	padding: 5px;
+
+	/* Flexbox */
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+
+	flex-direction:row;
+	flex-wrap:wrap;
+}
+
+.container{
+	border-bottom: 2px solid white;
+	width: 100%;
+	background-color: #FAD891;
+}
+
+header .logo img {
+	width:280px;
+
+}
+
+header nav {
+	width: 15%;
+	/* Flexbox */
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+header nav a {
+    background-color: transparent;
+	color: #486e6d;
+    font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition-duration: 0.4s;
+	height: inherit;
+	vertical-align: middle;
+
+	/* Flexbox */
+	flex-grow:1;
+}
+
+@media screen and (max-width: 800px) {
+	.container {
+		flex-direction:column;
+	}
+
+	header {
+		flex-direction:column;
+		padding:0;
+	}
+
+	header .logo {
+		margin:20px 0;
+	}
+
+	header nav {
+		width: 100%;
+	}
+}
+
+.profilelogo{
+    position: relative;
+    max-height: 30px;
+    left: 7px;
+    border: 2px solid #486e6d;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+
+.container2{
+	background-color: black;
+	padding: 20px;
+	border-top: 2px solid white;
+}
+
+.column1{
+	display: inline-block;
+	color: transparent;
+	padding: 40px 160px 40px 150px;
+}
+
+li{
+	padding: 5px;
+}
+
+.column2{
+	display: inline-block;
+	color: transparent;
+}
+
+.lifont{
+	color: white;
+	font-family:Candara;
+	font-size: 15px;
+}
+
+.downloadapp{
+	display: inline-block;
+	padding-left: 100px;
+}
+
+.socialpages{
+	display: inline-block;
+	padding-left: 100px;
+}
+
+.socialpages_{
+	display: inline-block;
+}
+
+.divider{
+	background-color: rgba(255, 255, 255, 0.4);
+	height: 1px;
+}
+
+.copyright{
+	padding-left: 20px;
+	padding-top: 7px;
+	color: rgba(255, 255, 255, 0.4);
+	font-family: Candara;
+	font-size: 13px;
+}
+
+
+/* HOME PAGE */
+.homecontainer{
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+
+.flaskblock {
+	width: 100%;
+	background-image: url("images/banner1.jpg");
+	background-size: cover;
+	text-align: center;
+	padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+
+.home-wel-mess{
+	font-weight: bold;
+	justify-content: center;
+	color: rgb(0, 0, 0);
+	font-size: 26px;
+	background-color: transparent;
+}
+
+div .flex{
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.button{
+	color: #000000;
+	background-color: transparent;
+	padding: 15px 20px;
+	text-align: center;
+	border: 2px solid #000000;
+	font-size: 24px;
+	-webkit-transition-duration: 0.4s;
+	border-radius: 30px;
+	margin: 80px;
+	font-weight: bold;
+}
+
+.button:hover{
+	background-color: rgb(0, 0, 0);
+	color: #FAD891;
+}
+
+.left-bott{
+	display: inline-block;
+	border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.noborder{
+	border: none;
+}
+
+.right-bott{
+	display: inline-block;
+}
+
+/* REGISTRATION PAGE */
+
+.content-section-register{
+    padding-bottom: 35px;
+}
+
+.reg{
+    padding-top: 30px;
+}
+
+.reg, .log{
+	color: #000000;
+}
+
+.leg{
+	color: #000000;
+}
+
+.form-group, .form-group-bott{
+	color: #000000;
+	font-weight: bold;
+	margin-top: 20px;
+
+}
+
+.form-group label{
+	position: absolute;
+}
+
+.form-group input{
+	margin-left: 10em;
+}
+
+.formbox{
+	height: 30px;
+	width: 200px;
+	border-radius: 5px;
+	border: 2px groove #FAD891;
+}
+
+.wrongformbox{
+	height: 30px;
+	width: 200px;
+	border-radius: 5px;
+	border: 2px groove #801813;
+}
+
+.submit-botton{
+	color: #000000;
+	background-color: transparent;
+	padding: 5px 10px;
+	text-align: center;
+	border: 2px solid #000000;
+	font-size: 18px;
+	font-weight: bold;
+	-webkit-transition-duration: 0.4s;
+	border-radius: 10px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.submit-botton:hover{
+	background-color: rgb(0, 0, 0);
+	color: #FAD891;
+}
+
+fieldset{
+	border: none;
+}
+
+.invalid-feedback{
+	position: relative;
+	left: 65px;
+}
+/* LOGIN PAGE */
+
+.content-section-login{
+    padding-top: 25px;
+    padding-bottom: 150px;
+}
+
+.log{
+    padding-top: 75px;
+}
+
+.linktoreg{
+	text-decoration: underline;
+	color: #000000;
+	font-weight: bold;
+}
+
+.loggedin{
+	color: #000000;
+	font-weight: bold;
+}
+
+
+/* PROFILE PAGE */
+
+.loginame{
+    font-color: red;
+    font-size: 10px;
+    font-weight: bold;
+    position: center;
+}
+
+/* CREATE A MATCH PAGE */
+
+.yesnolabel{
+    left: 400px;
+}
+
+.radiobox{
+    padding: 0px;
+    color: red;
+}
+
+.content-section-matchcreation{
+    padding-bottom: 170px;
+    padding-top: 30px;
+}
+
+
